@@ -1179,6 +1179,25 @@ a {
 	line-height: 18px;
 }
 
+.s-404-outer {
+	height: 100%;
+	text-align: center;
+}
+.s-404-outer .m-tbl {
+	height: 100%;
+}
+.s-404-outer h1 {
+	color: #5c5c5c;
+	font-weight: 600;
+	font-size: 60px;
+	margin-bottom: 5%;
+}
+.s-404-outer .desc {
+	color: #fff;
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+
 @media (max-width: 1466px) {
 	.s-main-top-slider .slide .m-cell:before {
 		width: 40px;
@@ -1367,5 +1386,14 @@ a {
 		width: 30px;
 		height: 30px;
 		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQCAYAAAAI0W+oAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPRJREFUeNqs080KAVEYxvGZWFDsfCyVjxUlZWXJXhZSrsHG2tolyELKmo2yEFfASlaylZQVV6DjeeudnDRxzpkz9TM5452/GcYRQjgG2rozLr1oblvIQkFrSvOb9cVnm0FRddY0cuX9EtI2Q3KkB0148PsRJGyEviO0Rr9tHfa8voFSkJBfRFaDCx+fmIb+RUgUOnCCFyygzFesFFKJyOi2Hfnzc4irhHQj8kP85LkxZH6FTCOeKux4fg05v1DQiKcBd+mv78qhgaUIiUALDny+FcXpQMxiRFaBM593SAspmFqOkDB04QZJWgj9e6oDytP+LcAA2gjVo9jTLZgAAAAASUVORK5CYII=') 50% 50% no-repeat;
+	}
+	.s-404-outer {
+		background: url('../img/s-404-outer-bg.png') 50% 50% no-repeat;
+		background-size: cover;
+	}
+	.s-404-outer h1 {
+		color: #fff;
+		font-size: 36px;
+		margin-bottom: 15px;
 	}
 }
