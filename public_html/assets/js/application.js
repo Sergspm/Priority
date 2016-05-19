@@ -228,4 +228,15 @@ $(function () {
 			}
 		})($(this));
 	});
+
+	// Counter in cart
+	$('.s-main-cart .m-tbl.row .counter a').click(function () {
+		var self = $(this),
+			num = self.siblings('.num'),
+			input = self.siblings('input'),
+			value = Math.max(1, (parseInt(input.val()) || 1) + (1 * (self.hasClass('plus') ? 1 : -1)));
+		num.html(value);
+		input.val(value).change();
+		return false;
+	});
 });

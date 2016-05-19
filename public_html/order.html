@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Сравнение товаров</title>
+	<title>Оформление заказа</title>
 	<link rel="stylesheet" href="assets/css/application.css">
 </head>
 <body>
@@ -98,72 +98,150 @@
 				<span>Персональные данные</span>
 			</div>
 		</section>
-		<section class="s-compared-products">
+		<section class="s-main-cart">
 			<div class="s-inner">
-				<h1>Сравнение товаров</h1>
-				<div class="s-tabs">
-					<div class="b-tabs">
-						<a href="#" class="tab active">Все характеристики</a>
-						<a href="#" class="tab">Только отличия</a>
-						<a href="#" class="el-link green">Очистить сравнение</a>
-					</div>
-					<div class="b-tabs-content-list">
-						<div class="b-tabs-content active">
-							<div class="m-tbl compare-table">
-								<div class="m-row">
-									<div class="m-cell"></div>
-									<div class="m-cell item">
-										<a href="#" class="img">
-											<img src="assets/img/s-compared-products-img-1.png" alt="">
-										</a>
-										<a href="#" class="title">Угол двухраструбный (по пайку) 90 градусов 7/8"</a>
-										<div class="prices">
-											<span class="old">350 руб.</span>
-											<strong>140 руб.</strong>
-										</div>
-									</div>
-									<div class="m-cell item">
-										<a href="#" class="img">
-											<img src="assets/img/s-compared-products-img-1.png" alt="">
-										</a>
-										<a href="#" class="title">Угол двухраструбный (по пайку) 90 градусов 7/8"</a>
-										<div class="prices">
-											<span class="old">350 руб.</span>
-											<strong>140 руб.</strong>
-										</div>
-									</div>
-									<div class="m-cell item">
-										<a href="#" class="img">
-											<img src="assets/img/s-compared-products-img-1.png" alt="">
-										</a>
-										<a href="#" class="title">Угол двухраструбный (по пайку) 90 градусов 7/8"</a>
-										<div class="prices">
-											<span class="old">350 руб.</span>
-											<strong>140 руб.</strong>
-										</div>
-									</div>
-								</div>
-								<div class="m-row">
-									<div class="m-cell property">Бренд</div>
-									<div class="m-cell value">Название</div>
-									<div class="m-cell value">Название</div>
-									<div class="m-cell value">Название</div>
-								</div>
-								<div class="m-row">
-									<div class="m-cell property">Артикул</div>
-									<div class="m-cell value">Н56448</div>
-									<div class="m-cell value">Н56448</div>
-									<div class="m-cell value">Н56448</div>
-								</div>
-								<div class="m-row">
-									<div class="m-cell property">Вес</div>
-									<div class="m-cell value">1,3 кг</div>
-									<div class="m-cell value">1,3 кг</div>
-									<div class="m-cell value">1,3 кг</div>
+				<h1>Оформление заказа</h1>
+				<section class="s-order-form m-cfx">
+					<form action="" method="POST">
+						<div class="form">
+							<h6>Тип покупателя</h6>
+							<div class="customer-type">
+								<label class="el-radio">
+									<input type="radio" name="customer-type" checked>
+									<span>Физическое лицо</span>
+								</label>
+								<label class="el-radio">
+									<input type="radio" name="customer-type">
+									<span>Юридическое лицо</span>
+								</label>
+							</div>
+							<div class="col">
+								<label class="el-input-text">
+									<input type="text" placeholder="Фамилия Имя Отчество">
+								</label>
+								<label class="el-input-text">
+									<input type="text" placeholder="Email">
+								</label>
+								<label class="el-input-text">
+									<input type="text" placeholder="Телефон">
+								</label>
+								<div class="delivery">
+									<h6>Способ доставки</h6>
+									<label class="el-radio">
+										<input type="radio" name="delivery-type" checked>
+										<span>Курьером <em>(500 руб.)</em></span>
+									</label>
+									<label class="el-radio">
+										<input type="radio" name="delivery-type">
+										<span>Самовывоз</span>
+									</label>
 								</div>
 							</div>
+							<div class="col">
+								<label class="el-input-text">
+									<input type="text" placeholder="Индекс">
+								</label>
+								<label class="el-input-text">
+									<input type="text" placeholder="Город">
+								</label>
+								<label class="el-input-textarea">
+									<textarea placeholder="Адрес доставки"></textarea>
+								</label>
+							</div>
 						</div>
-						<div class="b-tabs-content"></div>
+						<div class="payment-types">
+							<h6>Способ оплаты</h6>
+							<label>
+								<input type="radio" name="payment-type" checked>
+								<img src="assets/img/payment-type-img-ya.png" alt="">
+								<span>Яндекс.Деньги</span>
+							</label>
+							<label>
+								<input type="radio" name="payment-type">
+								<img src="assets/img/payment-type-img-bank-carts.png" alt="">
+								<span>Банковские карты</span>
+							</label>
+							<label>
+								<input type="radio" name="payment-type">
+								<img src="assets/img/payment-type-img-terminals.png" alt="">
+								<span>Терминалы</span>
+							</label>
+							<label>
+								<input type="radio" name="payment-type">
+								<img src="assets/img/payment-type-img-nal.png" alt="">
+								<span>Наличные курьеру</span>
+							</label>
+							<label>
+								<input type="radio" name="payment-type">
+								<img src="assets/img/payment-type-img-sber.png" alt="">
+								<span>Сбербанк</span>
+							</label>
+						</div>
+					</form>
+				</section>
+				<div class="cart m-cfx">
+					<h6>Состав заказа</h6>
+					<div class="m-tbl head">
+						<div class="m-cell img"></div>
+						<div class="m-cell title">Наименование</div>
+						<div class="m-cell price">Цена</div>
+						<div class="m-cell count">Количество</div>
+						<div class="m-cell sum">Сумма</div>
+						<div class="m-cell like"></div>
+						<div class="m-cell remove"></div>
+					</div>
+					<div class="m-tbl row">
+						<div class="m-cell img">
+							<a href="#">
+								<img src="assets/img/s-main-cart-img-1.png" alt="">
+							</a>
+						</div>
+						<div class="m-cell title">
+							<a href="#">Угол двухраструбный (по пайку) 90 градусов 7/8"</a>
+						</div>
+						<div class="m-cell price">
+							<strong>140 руб.</strong>
+							<span>350 руб.</span>
+						</div>
+						<div class="m-cell count">
+							<div class="counter blank">
+								<span class="num">1</span>
+							</div>
+						</div>
+						<div class="m-cell sum">
+							<strong>140 руб.</strong>
+						</div>
+						<div class="m-cell like"></div>
+						<div class="m-cell remove"></div>
+					</div>
+					<div class="m-tbl row">
+						<div class="m-cell img">
+							<a href="#">
+								<img src="assets/img/s-main-cart-img-1.png" alt="">
+							</a>
+						</div>
+						<div class="m-cell title">
+							<a href="#">Угол двухраструбный (по пайку) 90 градусов 7/8"</a>
+						</div>
+						<div class="m-cell price">
+							<strong>140 руб.</strong>
+							<span>350 руб.</span>
+						</div>
+						<div class="m-cell count">
+							<div class="counter blank">
+								<span class="num">1</span>
+							</div>
+						</div>
+						<div class="m-cell sum">
+							<strong>140 руб.</strong>
+						</div>
+						<div class="m-cell like"></div>
+						<div class="m-cell remove"></div>
+					</div>
+					<div class="summary">
+						<span>Итого</span>
+						<strong>1380 руб.</strong>
+						<a href="#" class="el-button red">оформить покупку</a>
 					</div>
 				</div>
 			</div>

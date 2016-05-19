@@ -767,11 +767,24 @@
 								<input type="checkbox">
 								<span>Запомнить меня</span>
 							</label>
-							<a href="#" class="el-link red">Забыли пароль?</a>
+							<a href="#" class="el-link red" data-action="modal-show" data-action-target="remember">Забыли пароль?</a>
 						</div>
 						<div class="buttons">
 							<input type="submit" value="войти" class="el-button green">
 							<a href="#" class="el-button gray" data-action="modal-show" data-action-target="signup">регистрация</a>
+						</div>
+					</form>
+				</section>
+				<section class="s-modal remember">
+					<a class="close" data-action="modal-hide"></a>
+					<h1>Восстановление пароля</h1>
+					<form action="" method="POST">
+						<label class="el-input-text">
+							<input type="text" placeholder="Email">
+						</label>
+						<div class="buttons">
+							<input type="submit" value="восстановить" class="el-button green">
+							<a href="#" class="el-button gray" data-action="modal-show" data-action-target="signin">войти</a>
 						</div>
 					</form>
 				</section>
