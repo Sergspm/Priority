@@ -239,4 +239,20 @@ $(function () {
 		input.val(value).change();
 		return false;
 	});
+
+	// Right panel show/hide
+	(function () {
+		var panel = $('.s-float-right-panel');
+		if (panel.size()) {
+			panel.find('.s-float-right-panel-tabs .tab').click(function () {
+				panel.addClass('active');
+				return false;
+			});
+			Body.click(function (e) {
+				if (!$(e.target).closest(panel).size()) {
+					panel.removeClass('active');
+				}
+			});
+		}
+	})();
 });
