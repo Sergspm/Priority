@@ -3396,6 +3396,36 @@ a {
 	margin-top: 26px;
 }
 
+.s-header-search {
+	overflow: hidden;
+	background: #45454b;
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 0;
+	opacity: 0;
+	-webkit-transition: opacity .3s, padding-top .3s, padding-bottom .3s, height .3s;
+	-moz-transition: opacity .3s, padding-top .3s, padding-bottom .3s, height .3s;
+	-o-transition: opacity .3s, padding-top .3s, padding-bottom .3s, height .3s;
+	transition: opacity .3s, padding-top .3s, padding-bottom .3s, height .3s;
+}
+.s-header-search.active {
+	height: 65px;
+	opacity: 1;
+	padding-top: 12px;
+	padding-bottom: 10px;
+}
+.s-header-search form {
+	float: right;
+}
+.s-header-search .el-button {
+	height: 40px;
+	line-height: 40px;
+	margin-left: 20px;
+}
+.s-header-search .el-input-text {
+	width: 400px;
+}
+
 
 @media (max-width: 1466px) {
 	.s-main-top-slider .slide .m-cell:before {

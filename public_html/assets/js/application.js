@@ -256,4 +256,13 @@ $(function () {
 			});
 		}
 	})();
+
+	// Search panel show/hide
+	(function () {
+		var panel = $('.s-header-search');
+		$('.s-header-nav .search a').click(function () {
+			panel.toggleClass('active');
+			return false;
+		});
+	})();
 });
