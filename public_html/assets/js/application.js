@@ -265,4 +265,13 @@ $(function () {
 			return false;
 		});
 	})();
+
+	// Animate from anchor-links to related blocks
+	$('a.a-anchor').click(function () {
+		var related = $('#' + this.href.split('#')[1]);
+		if (related.size()) {
+			$('html, body').animate({ scrollTop: related.offset().top + 'px' }, 500);
+			return false;
+		}
+	});
 });
