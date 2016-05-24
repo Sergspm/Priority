@@ -3367,12 +3367,12 @@ a {
 	overflow: hidden;
 }
 .s-float-right-panel-content .s-tabs {
-	padding-top: 44px;
+	padding-top: 40px;
 	padding-left: 42px;
 }
 .s-float-right-panel-content .b-tabs-content {
 	position: absolute;
-	top: 0;
+	top: 85px;
 	right: 0;
 	bottom: 0;
 	left: 0;
@@ -3394,6 +3394,37 @@ a {
 	float: right;
 	margin-right: 45px;
 	margin-top: 26px;
+}
+.s-float-right-panel-content .b-tabs-content.compared .s-catalog-products {
+	position: absolute;
+	top: 0;
+	right: 150px;
+	bottom: 73px;
+	left: 40px;
+	overflow: hidden;
+}
+.s-float-right-panel-content .b-tabs-content.compared .b-product-card {
+	width: 30%;
+	margin-right: 5%;
+	padding-bottom: 45%;
+}
+.s-float-right-panel-content .b-tabs-content.compared .b-product-card .inner {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9;
+	padding: 12px 10px;
+	box-shadow: none;
+}
+.s-float-right-panel-content .b-tabs-content.compared .b-product-card:nth-child(3n) {
+	margin-right: 0;
+}
+.s-float-right-panel-content .b-tabs-content.compared .b-product-card .title {
+	margin-bottom: 7px;
+}
+.s-float-right-panel-content .b-tabs-content.compared .b-product-card .title .img {
+	margin-bottom: 5px;
 }
 
 .s-header-search {
