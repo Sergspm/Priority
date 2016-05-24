@@ -3385,12 +3385,14 @@ a {
 	height: 73px;
 	background: #f7f7f7;
 }
-.s-float-right-panel-content .compared .footer-tab .el-button {
+.s-float-right-panel-content .compared .footer-tab .el-button,
+.s-float-right-panel-content .to-order .footer-tab .el-button {
 	float: right;
 	margin-right: 31px;
 	margin-top: 14px;
 }
-.s-float-right-panel-content .compared .footer-tab .el-link {
+.s-float-right-panel-content .compared .footer-tab .el-link,
+.s-float-right-panel-content .to-order .footer-tab .el-link {
 	float: right;
 	margin-right: 45px;
 	margin-top: 26px;
@@ -3426,49 +3428,59 @@ a {
 .s-float-right-panel-content .b-tabs-content.compared .b-product-card .title .img {
 	margin-bottom: 5px;
 }
-.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart {
+.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart,
+.s-float-right-panel-content .b-tabs-content.to-order .s-main-cart {
 	position: absolute;
 	top: 0;
 	right: 50px;
 	bottom: 40px;
 	left: 60px;
 }
-.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.img {
+.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.img,
+.s-float-right-panel-content .b-tabs-content.to-order .s-main-cart .m-cell.img {
 	width: 100px;
 	text-align: center;
 }
-.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.img img {
+.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.img img,
+.s-float-right-panel-content .b-tabs-content.to-order .s-main-cart .m-cell.img img {
 	width: 80px;
 }
-.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.remove {
+.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.remove,
+.s-float-right-panel-content .b-tabs-content.to-order .s-main-cart .m-cell.remove {
 	width: 20px;
 }
-.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.like {
+.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.like,
+.s-float-right-panel-content .b-tabs-content.to-order .s-main-cart .m-cell.like {
 	width: 40px;
 }
 .s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.like a {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAVCAYAAABCIB6VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAa5JREFUeNqslDtLA0EQxy96ShALBR+IIqiFOfwAFn4DO8FHYSkoCIJWFhrRTqwsDGIlRhCLaCU2Fja24qO5JiniiyiIosaIQeJvZQLLmfNyiQs/Zu9u93+zM7MTCIVCMcMwkrBu23bc+KcRQFiJdUEGNmCNHyTKFa6AftiS+TRcWJa1CLVleZzL5X4mCFmYSZiAKtjB89GyhfMD/RHMLtyoECH+WWoonOMI3qERmkv12CzwLg0p6IRjTvDhU1OF4OlXKCQcJ5g+baGv8KoKM10+XotdhohPb6PKKTfhpFhVcnc+hOugB768hMdg0GcxNMG5m/CVltyMjzC0yvzQTTghC1NSy0UlkKTbmG7YdxNWl+NB6niADY9F6LaL6BmOnLoJpzXhPZ/lduB2QQx1dLzcZjqjxc+UGnXGNStJqxRnogV7hSNmQclyUMJT7ViiRNvgDZ7Vc763mB7H6oVNqeclNkUcP17ATIHKwTDfL/9qQvqYhQ5pSGGEajTRFswcNEjS5r26W6GLYsgNzDoSfK89x726mz7C8Ar1sMpRs1qCX/B6iOk43MKKvvFbgAEAF46GBOemLG4AAAAASUVORK5CYII=');
     background-size: cover;
 }
-.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.sum {
+.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.sum,
+.s-float-right-panel-content .b-tabs-content.to-order .s-main-cart .m-cell.sum {
 	width: 120px;
 	text-align: center;
 }
-.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.count {
+.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.count,
+.s-float-right-panel-content .b-tabs-content.to-order .s-main-cart .m-cell.count {
 	width: 90px;
 	text-align: center;
 }
-.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.count .counter {
+.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.count .counter.reset {
 	background: transparent;
 	width: auto;
 }
-.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.price {
+.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-cell.price,
+.s-float-right-panel-content .b-tabs-content.to-order .s-main-cart .m-cell.price {
 	width: 110px;
 }
-.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .head .m-cell.price {
+.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .head .m-cell.price,
+.s-float-right-panel-content .b-tabs-content.to-order .s-main-cart .head .m-cell.price {
 	padding-left: 20px;
 }
-.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-tbl.row {
+.s-float-right-panel-content .b-tabs-content.favorite .s-main-cart .m-tbl.row,
+.s-float-right-panel-content .b-tabs-content.to-order .s-main-cart .m-tbl.row {
 	min-height: 100px;
 }
 
