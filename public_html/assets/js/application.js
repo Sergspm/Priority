@@ -141,6 +141,7 @@ $(function () {
 		});
 		function close() {
 			modal.removeClass('active');
+			Body.removeClass('m-overflow-hide');
 			return false;
 		}
 	})();
