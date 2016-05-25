@@ -8,36 +8,17 @@
 	<link rel="stylesheet" href="assets/css/application.css">
 </head>
 <body>
+
 	<section class="s-main-outer">
+
 		<header class="s-main-header">
+
 			<section class="s-header-mobile m-mobile">
-				<a class="menu-hamb"></a>
+				<a class="menu-arrow"></a>
 				<a class="lock"></a>
-				<h1>Приоритет</h1>
+				<h1>Название бренда</h1>
 			</section>
-			<section class="s-header-nav-mobile m-mobile">
-				<a href="#" class="menu-item" style="background-image: url('assets/img/s-header-nav-mobile-img-1.png')">
-					<span>Кондиционеры</span>
-				</a>
-				<a href="#" class="menu-item" style="background-image: url('assets/img/s-header-nav-mobile-img-2.png')">
-					<span>Вентиляция</span>
-				</a>
-				<a href="#" class="menu-item" style="background-image: url('assets/img/s-header-nav-mobile-img-3.png')">
-					<span>Отопление</span>
-				</a>
-				<a href="#" class="menu-item" style="background-image: url('assets/img/s-header-nav-mobile-img-4.png')">
-					<span>дренажные системы</span>
-				</a>
-				<a href="#" class="menu-item" style="background-image: url('assets/img/s-header-nav-mobile-img-5.png')">
-					<span>бренды</span>
-				</a>
-				<a href="#" class="menu-item" style="background-image: url('assets/img/s-header-nav-mobile-img-6.png')">
-					<span>акции</span>
-				</a>
-				<div class="more">
-					<a href="#" class="el-button red">перейти в каталог</a>
-				</div>
-			</section>
+
 			<section class="s-header-top-line m-fullwide">
 				<div class="s-inner">
 					<nav class="nav">
@@ -55,6 +36,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section class="s-header-company m-fullwide">
 				<div class="s-inner m-cfx">
 					<a href="/" class="logo">
@@ -75,6 +57,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section class="s-header-nav m-fullwide">
 				<div class="s-inner m-cfx">
 					<nav class="nav">
@@ -90,6 +73,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section class="s-header-search m-fullwide">
 				<div class="s-inner">
 					<form action="" method="GET">
@@ -100,7 +84,9 @@
 					</form>
 				</div>
 			</section>
+
 		</header>
+
 		<section class="s-breadcrumbs m-fullwide">
 			<div class="s-inner">
 				<a href="#">Главная</a>
@@ -108,11 +94,15 @@
 				<span>Персональные данные</span>
 			</div>
 		</section>
+
 		<section class="s-brand-content">
 			<div class="s-inner">
-				<h1>Fabello Decor</h1>
-				<div class="all-brands-left">
+				<h1 class="m-fullwide">Fabello Decor</h1>
+				<div class="all-brands-left m-fullwide">
 					<a href="#">Все бренды</a>
+				</div>
+				<div class="all-brands m-mobile">
+					<a href="#" class="el-link green">Все бренды</a>
 				</div>
 				<div class="content">
 					<p style="text-align: center;"><img src="assets/img/brand-content-img.png" alt=""></p>
@@ -126,10 +116,13 @@
 				</div>
 			</div>
 		</section>
+
 		<section class="s-catalog-filter-listing">
 			<div class="s-inner m-cfx">
-				<section class="s-catalog-filter-left-col">
-					<form action="" method="GET" class="s-catalog-filter m-fullwide">
+
+				<section class="s-catalog-filter-left-col m-fullwide">
+					<form action="" method="GET" class="s-catalog-filter">
+
 						<section class="s-accordion prices-range">
 							<input type="checkbox" id="s-accordion-prices-range" class="accordion-switcher" checked>
 							<label for="s-accordion-prices-range" class="accordion-title">Цена</label>
@@ -149,6 +142,7 @@
 								</div>
 							</div>
 						</section>
+
 						<section class="s-accordion brands-list">
 							<input type="checkbox" id="s-accordion-brands-list" class="accordion-switcher" checked>
 							<label for="s-accordion-brands-list" class="accordion-title">Бренд</label>
@@ -204,6 +198,7 @@
 								</div>
 							</div>
 						</section>
+
 						<section class="s-accordion dimensions-list">
 							<input type="checkbox" id="s-accordion-dimensions-list" class="accordion-switcher" checked>
 							<label for="s-accordion-dimensions-list" class="accordion-title">Размер</label>
@@ -256,6 +251,7 @@
 								</div>
 							</div>
 						</section>
+
 						<section class="s-accordion dimensions-list">
 							<input type="checkbox" id="s-accordion-weight-list" class="accordion-switcher">
 							<label for="s-accordion-weight-list" class="accordion-title">Вес</label>
@@ -308,6 +304,7 @@
 								</div>
 							</div>
 						</section>
+
 						<section class="s-accordion dimensions-list">
 							<input type="checkbox" id="s-accordion-power-list" class="accordion-switcher">
 							<label for="s-accordion-power-list" class="accordion-title">Мощность</label>
@@ -360,13 +357,16 @@
 								</div>
 							</div>
 						</section>
+
 						<div class="buttons">
 							<input type="submit" value="применить" class="el-button gray"><br>
 							<a class="el-link gray">Очистить фильтр</a>
 						</div>
+
 					</form>
 				</section>
-				<section class="s-catalog-filter-products">
+
+				<section class="s-catalog-filter-products main">
 					<div class="b-sort">
 						<div class="count">Товаров: 10</div>
 						<div class="sort">
@@ -375,10 +375,13 @@
 							<a href="#" class="desc"></a>
 						</div>
 					</div>
+					<div class="filter-link m-mobile">
+						<a href="#" class="el-link green">Фильтр</a>
+					</div>
 					<section class="s-catalog-products m-cfx">
-						<div class="outer a-swipe-slide a-only-mobile">
-							<div class="inner a-inner">
-								<article class="b-product-card a-slide">
+						<div class="outer">
+							<div class="inner">
+								<article class="b-product-card">
 									<div class="inner">
 										<a href="#" class="img">
 											<img src="assets/img/b-product-card-img-1.png" alt="">
@@ -398,7 +401,7 @@
 										</div>
 									</div>
 								</article>
-								<article class="b-product-card a-slide">
+								<article class="b-product-card">
 									<div class="inner">
 										<div class="fav"></div>
 										<a href="#" class="img">
@@ -420,7 +423,7 @@
 										</div>
 									</div>
 								</article>
-								<article class="b-product-card a-slide">
+								<article class="b-product-card">
 									<div class="inner">
 										<a href="#" class="img">
 											<img src="assets/img/b-product-card-img-1.png" alt="">
@@ -440,7 +443,7 @@
 										</div>
 									</div>
 								</article>
-								<article class="b-product-card a-slide">
+								<article class="b-product-card">
 									<div class="inner">
 										<div class="fav"></div>
 										<a href="#" class="img">
@@ -462,7 +465,7 @@
 										</div>
 									</div>
 								</article>
-								<article class="b-product-card a-slide">
+								<article class="b-product-card">
 									<div class="inner">
 										<a href="#" class="img">
 											<img src="assets/img/b-product-card-img-1.png" alt="">
@@ -482,7 +485,7 @@
 										</div>
 									</div>
 								</article>
-								<article class="b-product-card a-slide">
+								<article class="b-product-card">
 									<div class="inner">
 										<div class="fav"></div>
 										<a href="#" class="img">
@@ -504,7 +507,7 @@
 										</div>
 									</div>
 								</article>
-								<article class="b-product-card a-slide">
+								<article class="b-product-card">
 									<div class="inner">
 										<a href="#" class="img">
 											<img src="assets/img/b-product-card-img-1.png" alt="">
@@ -524,7 +527,7 @@
 										</div>
 									</div>
 								</article>
-								<article class="b-product-card a-slide">
+								<article class="b-product-card">
 									<div class="inner">
 										<a href="#" class="img">
 											<img src="assets/img/b-product-card-img-1.png" alt="">
@@ -544,7 +547,7 @@
 										</div>
 									</div>
 								</article>
-								<article class="b-product-card a-slide">
+								<article class="b-product-card">
 									<div class="inner">
 										<a href="#" class="img">
 											<img src="assets/img/b-product-card-img-1.png" alt="">
@@ -564,7 +567,7 @@
 										</div>
 									</div>
 								</article>
-								<article class="b-product-card a-slide">
+								<article class="b-product-card">
 									<div class="inner">
 										<a href="#" class="img">
 											<img src="assets/img/b-product-card-img-1.png" alt="">
@@ -587,9 +590,13 @@
 							</div>
 						</div>
 					</section>
+					<div class="b-more-products m-mobile">
+						<a href="#">+</a>
+					</div>
 				</section>
 			</div>
 		</section>
+
 		<section class="s-hor-slider-products-tabs">
 			<div class="s-inner">
 				<div class="s-tabs">

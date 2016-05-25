@@ -653,6 +653,15 @@ a {
 	border-top: 2px solid;
 	margin-top: 4px;
 }
+.s-header-mobile .menu-arrow {
+	display: block;
+	position: absolute;
+	width: 11px;
+	height: 14px;
+	top: 15px;
+	left: 17px;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAABLGlDQ1BJQ0MgcHJvZmlsZQAAeNqtjrFKw1AUQM+LouJQKwRxcHiTKCi26mDGpC1FEKzVIcnWpKFKaRJeXtV+hKNbBxd3v8DJUXBQ/AL/QHHq4BAhg4MInuncw+VywajYdadhlGEQa9VuOtL1fDn7xAxTANAJs9RutQ4A4iSO+MHnKwLgedOuOw3+xnyYKg1MgO1ulIUgKkD/QqcaxBgwg36qQdwBpjpp10A8AKVe7i9AKcj9DSgp1/NBfABmz/V8MOYAM8h9BTB1dKkBakk6Ume9Uy2rlmVJu5sEkTweZToaZHI/DhOVJqqjoy6Q/wfAYr7YbjpyrWpZe+v8M67ny9zejxCAWHosWkE4VOffKoyd3+fixngZDm9helK03Su42YCF66KtVqG8BffjL8DGT/2b2yonAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AUZCAQdNhjeIgAAAIZJREFUKM/d0CEKAlEQgOF5Nrtg0RO40WT0AKZlL2HxMCaLXQSrRzCaLIIgdj2BfAYfWHxu928D30yYiB9h490D4xKqsMITR9Ql2MM+XzyhKsE+lhle0ZTgCLsMD5igW8LrDO+YllCNc4Y3zJC+2U5KaRsRlzwPImKYUhItP134NI+2/nHhBYmf2KPmOMfAAAAAAElFTkSuQmCC');
+}
 .s-header-mobile .lock {
 	display: block;
 	position: absolute;
@@ -1778,6 +1787,10 @@ a {
 	top: 0;
 	left: -40px;
 }
+.s-brand-content .all-brands {
+	text-align: center;
+	margin: 20px 0;
+}
 .s-brand-content .content {
 	margin: 0 auto 0 260px;
 	width: 52%;
@@ -1993,6 +2006,9 @@ a {
 .s-catalog-filter-products .b-sort .sort a.desc:hover {
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAALCAYAAACzkJeoAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAG5JREFUeNpijImJYYACGyA+DMQ+QLwVJMDEgAfQSJIFiPmBWBiIpaBiEkCsBMTvQZJcQHwKqgAE5gDxZyA2ABn7HIhT0EzMBuJ7MDs3APEsKHslEC+G2QkDRUCsAMSZyA6Cga9A7AnE/2ACAAEGAOJBD54E8q/MAAAAAElFTkSuQmCC');
 }
+.s-catalog-filter-products .filter-link {
+	margin-bottom: 20px;
+}
 .s-catalog-filter-products .s-catalog-products .b-product-card {
 	width: 24%;
 	margin-right: 1.33%;
@@ -2001,6 +2017,21 @@ a {
 }
 .s-catalog-filter-products .s-catalog-products .b-product-card:nth-child(4n) {
 	margin-right: 0;
+}
+.s-catalog-filter-products .b-more-products {
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+.s-catalog-filter-products .b-more-products a {
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	border: 2px solid #b8b9bb;
+	border-radius: 20px;
+	color: #b8b9bb;
+	font-size: 30px;
+	line-height: 32px;
 }
 
 .s-hor-slider-products-tabs {
@@ -3608,10 +3639,11 @@ a {
 }
 @media (max-width: 768px) {
 	.m-fullwide {
-		display: none;
+
+		display: none !important;
 	}
 	.m-mobile {
-		display: block;
+		display: block !important;
 	}
 	.s-catalog-index-listing .b-tabs .tab {
 		display: block;
@@ -3782,5 +3814,52 @@ a {
 		color: #fff;
 		font-size: 36px;
 		margin-bottom: 15px;
+	}
+	.s-brand-content .content {
+		margin-left: 0;
+		width: 100%;
+		padding-right: 5%;
+		padding-left: 5%;
+	}
+	.s-catalog-filter-products {
+		margin-left: 0;
+		padding-right: 5%;
+		padding-left: 5%;
+	}
+	.s-catalog-filter-products .b-sort {
+		padding-top: 20px;
+		padding-bottom: 15px;
+	}
+	.s-catalog-filter-products .b-sort .count {
+		padding-top: 5px;
+	}
+	.s-catalog-filter-products.main .s-catalog-products .outer {
+		white-space: normal;
+	}
+	.s-catalog-filter-products.main .s-catalog-products .b-product-card {
+		width: 48%;
+		margin-right: 4%;
+		float: left;
+		margin-left: 0;
+		margin-bottom: 4%;
+		padding-bottom: 75%;
+	}
+	.s-catalog-filter-products.main .s-catalog-products .b-product-card:nth-child(2n) {
+		margin-right: 0;
+	}
+	.s-catalog-filter-products.main .s-catalog-products .b-product-card .inner {
+		padding: 10px;
+		background: #fff;
+	}
+	.s-catalog-filter-products.main .s-catalog-products .b-product-card .title {
+		margin-bottom: 10px;
+	}
+	.s-hor-slider-products-tabs .b-tabs .tab {
+		display: block;
+		margin: 0 auto 5px;
+		width: 150px;
+		text-align: center;
+		padding-right: 0;
+		padding-left: 0;
 	}
 }

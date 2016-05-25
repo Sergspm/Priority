@@ -217,15 +217,20 @@ $(function () {
 				if (in_progress) {
 					return;
 				}
-				var inner_width = inner.width(),
-					cur_width = 0;
-				slider.find('.a-slide').each(function () {
-					var slide = $(this);
-					cur_width += slide.outerWidth(true);
-					if (inner_width - cur_width + 30 < 0) {
-						slide.css({ opacity: 0, visibility: 'hidden' });
-					}
-				});
+				var slides = slider.find('.a-slide');
+				if (isMobile()) {
+					slides.css({ opacity: 1, visibility: 'visible' });
+				} else {
+					var inner_width = inner.width(),
+						cur_width = 0;
+					slides.each(function () {
+						var slide = $(this);
+						cur_width += slide.outerWidth(true);
+						if (inner_width - cur_width + 30 < 0) {
+							slide.css({ opacity: 0, visibility: 'hidden' });
+						}
+					});
+				}
 			}
 		})($(this));
 	});
