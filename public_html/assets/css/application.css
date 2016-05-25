@@ -1084,7 +1084,9 @@ a {
 	overflow: hidden;
 	position: relative;
 }
-.s-advantages .outer .arrow {
+.s-advantages .outer .arrow,
+.s-about-info-slides .arrow,
+.s-about-employeers .arrow {
 	display: block;
 	position: absolute;
 	width: 33px;
@@ -1096,14 +1098,26 @@ a {
 	background-position: 50% 50%;
 	z-index: 9;
 }
-.s-advantages .outer .arrow.right {
+.s-about-info-slides .arrow {
+	background-color: rgba(0, 0, 0, .6);
+	margin: 0;
+	top: 20%;
+}
+.s-about-employeers .arrow {
+	background-color: rgba(0, 0, 0, .6);
+}
+.s-advantages .outer .arrow.right,
+.s-about-info-slides .arrow.right,
+.s-about-employeers .arrow.right {
 	right: 0;
 	-webkit-border-radius: 10px 0 0 10px;
 	   -moz-border-radius: 10px 0 0 10px;
 	        border-radius: 10px 0 0 10px;
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAXCAYAAAAyet74AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAOVJREFUeNqE08/KAWEUx/Gh2GCnWL5iqZTspeQWJLegbJRbQG5BUi5BFlZ2kgsYyVbepfddkT+P78lZmjNTn1n9OnOec57xnHNzPFCDF0ReKRxxQtoKigpuWCBiBUXPfZ5uWFAqLbVy2QqKDM7YI2kFRR1PzMKCYqD9tsOCMWzwj4IVFD+4YIe4FRRNbWEc9ezngDuKVrUEfPzK2KzgFC80rMO0tLehNZ48/rCV0wYF4xqQYM7azEg/2bIuRUObn1jXLKtj8HUsX4NyD1e4omT9Cn3tq2OtU6pVWZGscg0XtMu3AAMANf6iMF2E9kYAAAAASUVORK5CYII=');
 }
-.s-advantages .outer .arrow.left {
+.s-advantages .outer .arrow.left,
+.s-about-info-slides .arrow.left,
+.s-about-employeers .arrow.left {
 	left: 0;
 	-webkit-border-radius: 0 10px 10px 0;
 	   -moz-border-radius: 0 10px 10px 0;
@@ -1296,8 +1310,15 @@ a {
 	margin-bottom: 40px;
 	margin-left: 2.05%;
 }
+.s-news-row.centered h1 {
+	text-align: center;
+	padding-top: 20px;
+}
 .s-news-row h1 .el-link {
 	margin-left: 30px;
+}
+.s-news-row.centered .all {
+	text-align: center;
 }
 .s-news-row .outer {
 	position: relative;
@@ -3057,6 +3078,7 @@ a {
 }
 .s-about-info-slides .s-inner {
 	overflow: hidden;
+	position: relative;
 }
 .s-about-info-slides .inner {
 	position: relative;
@@ -3118,6 +3140,7 @@ a {
 .s-about-employeers .inner {
 	font-size: 0;
 	line-height: 0;
+	position: relative;
 }
 .s-about-employeers .slide {
 	display: inline-block;
@@ -3254,6 +3277,10 @@ a {
 	font-size: 18px;
 	font-weight: 600;
 	margin-right: 7%;
+}
+.s-about-vacancies-list .vacancy .content .salary.m-mobile {
+	float: none;
+	margin-bottom: 5px;
 }
 .s-about-vacancies-list .vacancy .content time {
 	display: block;
@@ -3993,5 +4020,76 @@ a {
 	}
 	.s-personal-data .buttons {
 		text-align: center;
+	}
+	.s-about-info-slides {
+		padding-top: 20px;
+	}
+	.s-about-info-slides .slide {
+		width: 100%;
+		padding-bottom: 0;
+	}
+	.s-about-info-slides .slide .slide-inner {
+		position: relative;
+		padding-right: 7%;
+		padding-left: 7%;
+	}
+	.s-about-info-slides .slide .slide-inner .img {
+		padding-bottom: 76.88%;
+	}
+	.s-about-info-slides .slide p {
+		line-height: 1.8em;
+	}
+	.s-about-employeers .b-tabs {
+		text-align: center;
+		padding: 0 10%;
+	}
+	.s-about-employeers .b-tabs-content {
+		overflow: hidden;
+	}
+	.s-about-employeers .inner {
+		white-space: nowrap;
+	}
+	.s-about-employeers .slide {
+		width: 100%;
+		white-space: normal;
+		padding: 0 20%;
+	}
+	.s-about-employeers .slide .img {
+		float: none;
+		width: 100%;
+		padding-bottom: 100%;
+	}
+	.s-about-employeers .slide .content {
+		margin: 0;
+		text-align: center;
+		padding-top: 20px;
+	}
+	.s-about-employeers .b-tabs-content {
+		position: relative;
+	}
+	.s-about-vacancies-list h2 {
+		text-align: center;
+	}
+	.s-about-vacancies-list .vacancies .vacancy {
+		float: none;
+		width: 90%;
+		margin: 0 auto 5%;
+		padding-bottom: 80%;
+	}
+	.s-about-vacancies-list .vacancy .tag {
+		margin-bottom: 5px;
+	}
+	.s-about-optovim .s-inner {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.s-about-optovim .text-slider-right {
+		width: 100%;
+		margin: 0;
+	}
+}
+@media (max-width: 320px) {
+	.s-main-footer .subscribe .form {
+		margin-left: 15px;
 	}
 }
