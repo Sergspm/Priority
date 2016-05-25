@@ -1732,6 +1732,7 @@ a {
 	color: #a9a9a9;
 	font-size: 12px;
 	padding-bottom: 10px;
+	padding-top: 10px;
 }
 .s-breadcrumbs a,
 .s-breadcrumbs span {
@@ -2028,7 +2029,9 @@ a {
 	width: 38px;
 	height: 38px;
 	border: 2px solid #b8b9bb;
-	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	   -moz-border-radius: 20px;
+	        border-radius: 20px;
 	color: #b8b9bb;
 	font-size: 30px;
 	line-height: 32px;
@@ -3861,5 +3864,15 @@ a {
 		text-align: center;
 		padding-right: 0;
 		padding-left: 0;
+	}
+	.s-brands-list .brand {
+		display: block;
+		width: 170px;
+		margin: 0 auto 20px;
+		min-height: 80px;
+		text-align: center;
+	}
+	.s-brands-list .brand img {
+		display: inline-block;
 	}
 }
