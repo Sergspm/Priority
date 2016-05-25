@@ -2034,6 +2034,9 @@ a {
 .s-catalog-filter-products .filter-link {
 	margin-bottom: 20px;
 }
+.s-catalog-filter-products .filter-link .el-link {
+	margin-right: 20px;
+}
 .s-catalog-filter-products .s-catalog-products .b-product-card {
 	width: 24%;
 	margin-right: 1.33%;
