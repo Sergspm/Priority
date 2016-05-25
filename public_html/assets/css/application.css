@@ -3965,4 +3965,33 @@ a {
 		margin: 0;
 		padding: 0;
 	}
+	.s-personal-data .s-tabs.vertical .b-tabs {
+		float: none;
+	}
+	.s-personal-data .s-tabs.vertical .b-tabs .tab {
+		padding-right: 0;
+		padding-left: 0;
+		margin: 0 auto 5px;
+		width: 240px;
+		text-align: center;
+	}
+	.s-personal-data .b-tabs-content-list {
+		margin: 0;
+		padding-top: 20px;
+	}
+	.s-personal-data .form-row p {
+		display: none;
+	}
+	.s-personal-data .form-row {
+		padding-right: 5%;
+		padding-left: 5%;
+		margin-bottom: 15px;
+	}
+	.s-personal-data .el-input-text {
+		float: none;
+		width: 100%;
+	}
+	.s-personal-data .buttons {
+		text-align: center;
+	}
 }
