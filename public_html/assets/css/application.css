@@ -2141,10 +2141,11 @@ a {
 	height: 26px;
 	background: rgba(0, 0, 0, .38) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAARNJREFUeNpckUlqw0AQRVsiJxBCw1IHyS6OQARMvAk+QiBk43XOoVuEBEOISRbGvocGtNC01eCFoPN/6DZCgqK6ql5/6reMJElWQohnRBwEwY9YfGmarvXc5MFxnEfkNwy2C5D1zvO8kBzhuGmas+/7t2woJYIRa/arqjqTE1JKgVW2iNMwDBL5GxEi9n3fsz5xTu4fVhfWBLuuk1CVOqMXaeYKqwurLMvkNE0yz3OC4XxuLlzvbNsWRVEIy7LYfkX/QTOmAjdIL3QNsweo3Ldt++W6bmQYxl6bNnF4ogLAO7j+nb13XNf1AReEeqWQex7HceR+R8Rm4eFqGvnjhgplWQql+D7/Kag/oXjBahfO/wQYACRM6vhKPF2/AAAAAElFTkSuQmCC') 50% 50% no-repeat;
 	-webkit-border-radius: 14px;
-	   -moz-border-radius: 14px;
-	        border-radius: 14px;
+	-moz-border-radius: 14px;
+	border-radius: 14px;
 	right: -30px;
 	top: 0;
+	z-index: 9;
 }
 .s-modal h1 {
 	font-size: 18px;
@@ -3893,15 +3894,30 @@ a {
 		background-color: #000;
 	}
 	.s-modal.signin .el-input-text,
-	.s-modal.signin .el-input-password {
+	.s-modal.signin .el-input-password,
+	.s-modal.signup .el-input-text,
+	.s-modal.signup .el-input-password,
+	.s-modal.remember .el-input-text,
+	.s-modal.remember .el-input-password {
 		width: 100%;
 	}
-	.s-modal.signin {
+	.s-modal.signup .el-input-text,
+	.s-modal.signup .el-input-password {
+		margin-bottom: 15px;
+	}
+	.s-modal.signin,
+	.s-modal.signup,
+	.s-modal.remember {
 		background: url('../img/s-modal-signin-mobile-bg.png') 50% 50% no-repeat;
 		background-size: cover;
 		padding-top: 30%;
 	}
-	.s-modal.signin:before {
+	.s-modal.signup {
+		padding-top: 10%;
+	}
+	.s-modal.signin:before,
+	.s-modal.signup:before,
+	.s-modal.remember:before {
 		content: "";
 		display: block;
 		position: absolute;
@@ -3912,23 +3928,40 @@ a {
 		background-color: rgba(0, 0, 0, 0.3);
 	}
 	.s-modal.signin h1,
-	.s-modal.signin form {
+	.s-modal.signin form,
+	.s-modal.signup h1,
+	.s-modal.signup p,
+	.s-modal.signup form,
+	.s-modal.remember h1,
+	.s-modal.remember form {
 		position: relative;
 		z-index: 1;
 	}
-	.s-modal.signin h1 {
+	.s-modal.signin h1,
+	.s-modal.signup h1,
+	.s-modal.remember h1 {
 		color: #fff;
 		text-align: center;
 		margin-bottom: 10px;
 	}
-	.s-modal.signin .el-checkbox span {
+	.s-modal.signin .el-checkbox span,
+	.s-modal.signup .el-checkbox span {
 		color: #fff;
 		font-weight: 600;
 	}
-	.s-modal.signin .buttons {
+	.s-modal.signin .buttons,
+	.s-modal.signup .buttons,
+	.s-modal.remember .buttons {
 		text-align: center; 
 	}
-	.s-modal.signin .buttons .el-button {
+	.s-modal.signin .buttons .el-button,
+	.s-modal.signup .buttons .el-button,
+	.s-modal.remember .buttons .el-button {
 		margin: 0 0 20px;
+	}
+	.s-modals .s-modal.signup .col {
+		float: none;
+		margin: 0;
+		padding: 0;
 	}
 }
