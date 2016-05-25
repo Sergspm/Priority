@@ -15,7 +15,7 @@
 
 			<section class="s-header-mobile m-mobile">
 				<a class="menu-hamb"></a>
-				<a class="lock"></a>
+				<a class="lock" data-action="modal-show" data-action-target="signin"></a>
 				<h1>Приоритет</h1>
 			</section>
 
@@ -1099,7 +1099,10 @@
 						</div>
 						<div class="buttons">
 							<input type="submit" value="войти" class="el-button green">
-							<a href="#" class="el-button gray" data-action="modal-show" data-action-target="signup">регистрация</a>
+							<a class="el-button gray m-fullwide" data-action="modal-show" data-action-target="signup">регистрация</a>
+							<div class="m-mobile">
+								<a class="el-link white" data-action="modal-show" data-action-target="signup">Зарегистрироваться</a>
+							</div>
 						</div>
 					</form>
 				</section>

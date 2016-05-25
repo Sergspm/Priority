@@ -161,6 +161,9 @@ a {
 .el-link.gray {
 	color: #bfbfbf;
 }
+.el-link.white {
+	color: #fff;
+}
 
 .el-slider-range .inputs {
 	margin-bottom: 22px;
@@ -2118,6 +2121,7 @@ a {
 .s-modals .m-tbl {
 	height: 100%;
 	text-align: center;
+	table-layout: fixed;
 }
 
 .s-modal {
@@ -3874,5 +3878,57 @@ a {
 	}
 	.s-brands-list .brand img {
 		display: inline-block;
+	}
+	.s-modal {
+		width: 100%;
+		padding: 7%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.s-modal .close {
+		top: 10px;
+		right: 10px;
+		background-color: #000;
+	}
+	.s-modal.signin .el-input-text,
+	.s-modal.signin .el-input-password {
+		width: 100%;
+	}
+	.s-modal.signin {
+		background: url('../img/s-modal-signin-mobile-bg.png') 50% 50% no-repeat;
+		background-size: cover;
+		padding-top: 30%;
+	}
+	.s-modal.signin:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+	.s-modal.signin h1,
+	.s-modal.signin form {
+		position: relative;
+		z-index: 1;
+	}
+	.s-modal.signin h1 {
+		color: #fff;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.s-modal.signin .el-checkbox span {
+		color: #fff;
+		font-weight: 600;
+	}
+	.s-modal.signin .buttons {
+		text-align: center; 
+	}
+	.s-modal.signin .buttons .el-button {
+		margin: 0 0 20px;
 	}
 }
