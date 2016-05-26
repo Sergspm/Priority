@@ -286,4 +286,10 @@ $(function () {
 		self.closest('.gallery').find('.main-img').css({ 'background-image': "url('" + self.attr('href') + "')" });
 		return false;
 	});
+
+	// Toggle main mobile menu
+	$('.s-header-mobile .menu-hamb, .s-header-mobile .menu-arrow').click(function () {
+		$('.s-main-mobile-menu, .s-header-mobile').toggleClass('active');
+		return false;
+	});
 });
