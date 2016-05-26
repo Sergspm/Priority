@@ -1129,7 +1129,8 @@ a {
 }
 .s-advantages .outer .arrow,
 .s-about-info-slides .arrow,
-.s-about-employeers .arrow {
+.s-about-employeers .arrow,
+.s-compared-products .mobile-tables-compare .arrow {
 	display: block;
 	position: absolute;
 	width: 33px;
@@ -1146,12 +1147,14 @@ a {
 	margin: 0;
 	top: 20%;
 }
-.s-about-employeers .arrow {
+.s-about-employeers .arrow,
+.s-compared-products .mobile-tables-compare .arrow {
 	background-color: rgba(0, 0, 0, .6);
 }
 .s-advantages .outer .arrow.right,
 .s-about-info-slides .arrow.right,
-.s-about-employeers .arrow.right {
+.s-about-employeers .arrow.right,
+.s-compared-products .mobile-tables-compare .arrow.right {
 	right: 0;
 	-webkit-border-radius: 10px 0 0 10px;
 	   -moz-border-radius: 10px 0 0 10px;
@@ -1160,7 +1163,8 @@ a {
 }
 .s-advantages .outer .arrow.left,
 .s-about-info-slides .arrow.left,
-.s-about-employeers .arrow.left {
+.s-about-employeers .arrow.left,
+.s-compared-products .mobile-tables-compare .arrow.left {
 	left: 0;
 	-webkit-border-radius: 0 10px 10px 0;
 	   -moz-border-radius: 0 10px 10px 0;
@@ -4376,6 +4380,35 @@ a {
 	.s-order-form .payment-types {
 		float: none;
 		width: 100%;
+	}
+	.s-compared-products .b-tabs .tab {
+		display: block;
+		margin: 0 auto 5px;
+		width: 200px;
+		text-align: center;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.s-compared-products .mobile-tables-compare {
+		overflow: hidden;
+		position: relative;
+	}
+	.s-compared-products .mobile-tables-compare .slider-inner {
+		position: relative;
+		white-space: nowrap;
+	}
+	.s-compared-products .mobile-tables-compare .slide {
+		white-space: normal;
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		padding-right: 7%;
+		padding-left: 7%;
+	}
+	.s-compared-products .mobile-tables-compare .item {
+		display: block;
+		width: 70%;
+		margin: 0 auto 5%;
 	}
 }
 @media (max-width: 320px) {
