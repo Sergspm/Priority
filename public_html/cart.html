@@ -8,13 +8,20 @@
 	<link rel="stylesheet" href="assets/css/application.css">
 </head>
 <body>
+
 	<section class="s-main-outer">
+
 		<header class="s-main-header">
+
 			<section class="s-header-mobile m-mobile">
 				<a class="menu-hamb"></a>
+				<a class="cart">
+					<span>3</span>
+				</a>
 				<a class="lock"></a>
-				<h1>Приоритет</h1>
+				<h1>Корзина</h1>
 			</section>
+
 			<section class="s-main-mobile-menu m-mobile">
 				<nav class="nav">
 					<a href="#">Кондиционирование</a>
@@ -30,29 +37,7 @@
 					<a href="#" class="ico4"></a>
 				</div>
 			</section>
-			<section class="s-header-nav-mobile m-mobile">
-				<a href="#" class="menu-item" style="background-image: url('assets/img/s-header-nav-mobile-img-1.png')">
-					<span>Кондиционеры</span>
-				</a>
-				<a href="#" class="menu-item" style="background-image: url('assets/img/s-header-nav-mobile-img-2.png')">
-					<span>Вентиляция</span>
-				</a>
-				<a href="#" class="menu-item" style="background-image: url('assets/img/s-header-nav-mobile-img-3.png')">
-					<span>Отопление</span>
-				</a>
-				<a href="#" class="menu-item" style="background-image: url('assets/img/s-header-nav-mobile-img-4.png')">
-					<span>дренажные системы</span>
-				</a>
-				<a href="#" class="menu-item" style="background-image: url('assets/img/s-header-nav-mobile-img-5.png')">
-					<span>бренды</span>
-				</a>
-				<a href="#" class="menu-item" style="background-image: url('assets/img/s-header-nav-mobile-img-6.png')">
-					<span>акции</span>
-				</a>
-				<div class="more">
-					<a href="#" class="el-button red">перейти в каталог</a>
-				</div>
-			</section>
+
 			<section class="s-header-top-line m-fullwide">
 				<div class="s-inner">
 					<nav class="nav">
@@ -70,6 +55,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section class="s-header-company m-fullwide">
 				<div class="s-inner m-cfx">
 					<a href="/" class="logo">
@@ -90,6 +76,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section class="s-header-nav m-fullwide">
 				<div class="s-inner m-cfx">
 					<nav class="nav">
@@ -105,6 +92,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section class="s-header-search m-fullwide">
 				<div class="s-inner">
 					<form action="" method="GET">
@@ -115,7 +103,9 @@
 					</form>
 				</div>
 			</section>
+
 		</header>
+
 		<section class="s-breadcrumbs m-fullwide">
 			<div class="s-inner">
 				<a href="#">Главная</a>
@@ -123,11 +113,12 @@
 				<span>Персональные данные</span>
 			</div>
 		</section>
+
 		<section class="s-main-cart">
 			<div class="s-inner">
-				<h1>Корзина</h1>
+				<h1 class="m-fullwide">Корзина</h1>
 				<div class="cart m-cfx">
-					<div class="m-tbl head">
+					<div class="m-tbl head m-fullwide">
 						<div class="m-cell img"></div>
 						<div class="m-cell title">Наименование</div>
 						<div class="m-cell price">Цена</div>
@@ -198,6 +189,37 @@
 							<a href="#" class="remove"></a>
 						</div>
 					</div>
+					<div class="m-tbl row">
+						<div class="m-cell img">
+							<a href="#">
+								<img src="assets/img/s-main-cart-img-1.png" alt="">
+							</a>
+						</div>
+						<div class="m-cell title">
+							<a href="#">Угол двухраструбный (по пайку) 90 градусов 7/8"</a>
+						</div>
+						<div class="m-cell price">
+							<strong>140 руб.</strong>
+							<span>350 руб.</span>
+						</div>
+						<div class="m-cell count">
+							<div class="counter">
+								<a class="minus">-</a>
+								<a class="plus">+</a>
+								<span class="num">1</span>
+								<input type="hidden" value="1">
+							</div>
+						</div>
+						<div class="m-cell sum">
+							<strong>140 руб.</strong>
+						</div>
+						<div class="m-cell like">
+							<a href="#" class="like"></a>
+						</div>
+						<div class="m-cell remove">
+							<a href="#" class="remove"></a>
+						</div>
+					</div>
 					<div class="summary">
 						<span>Итого</span>
 						<strong>1380 руб.</strong>
@@ -206,7 +228,8 @@
 				</div>
 			</div>
 		</section>
-		<section class="s-hor-slider-products-tabs bg-gray">
+
+		<section class="s-hor-slider-products-tabs bg-gray m-fullwide">
 			<div class="s-inner">
 				<div class="s-tabs">
 					<div class="b-tabs">
@@ -439,11 +462,13 @@
 				</div>
 			</div>
 		</section>
+
 		<section class="s-map-row top-shift">
 			<div class="inner">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31988.91312725436!2d30.34386137135259!3d59.92704668630636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1462482246196" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 		</section>
+
 		<section class="s-under-map-contacts m-mobile">
 			<div class="city">г. Санкт-Петербург</div>
 			<div>
@@ -459,6 +484,7 @@
 				<a href="#" class="el-link green">Заказать звонок</a>
 			</div>
 		</section>
+
 	</section>
 
 	<footer class="s-main-footer">

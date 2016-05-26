@@ -290,6 +290,7 @@ $(function () {
 	// Toggle main mobile menu
 	$('.s-header-mobile .menu-hamb, .s-header-mobile .menu-arrow').click(function () {
 		$('.s-main-mobile-menu, .s-header-mobile').toggleClass('active');
+		Body.toggleClass('m-overflow-hide');
 		return false;
 	});
 });
