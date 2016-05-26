@@ -279,4 +279,11 @@ $(function () {
 			return false;
 		}
 	});
+
+	// Switch photos in card gallery
+	$('.s-card-content .gallery .preview').click(function () {
+		var self = $(this);
+		self.closest('.gallery').find('.main-img').css({ 'background-image': "url('" + self.attr('href') + "')" });
+		return false;
+	});
 });
