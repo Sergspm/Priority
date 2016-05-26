@@ -4340,6 +4340,43 @@ a {
 		margin: 30px auto 0;
 		width: 220px;
 	}
+	.s-order-form {
+		padding-top: 30px;
+		padding-right: 5%;
+		padding-left: 5%;
+		margin-bottom: 20px;
+	}
+	.s-order-form .form {
+		float: none;
+		width: 100%;
+		padding: 0 0 110px;
+	}
+	.s-order-form h6 {
+		margin-bottom: 20px;
+	}
+	.s-order-form .customer-type .el-radio {
+		display: block;
+		margin-bottom: 10px;
+	}
+	.s-order-form .col {
+		float: none;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+	.s-order-form .col .el-input-text {
+		margin-bottom: 10px;
+	}
+	.s-order-form .col .delivery {
+		position: absolute;
+		top: 340px;
+		left: 0;
+	}
+	.s-order-form .payment-types {
+		float: none;
+		width: 100%;
+	}
 }
 @media (max-width: 320px) {
 	.s-main-footer .subscribe .form {
