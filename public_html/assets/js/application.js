@@ -293,4 +293,12 @@ $(function () {
 		Body.toggleClass('m-overflow-hide');
 		return false;
 	});
+
+	// Price slider
+	(function () {
+		var slider = $('.el-slider-range');
+		if (!slider.size()) {
+			return;
+		}
+	})();
 });
