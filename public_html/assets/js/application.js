@@ -323,6 +323,20 @@ $(function () {
 			}
 			return false;
 		});
+		$('.s-left-catalog-menu .main-nav .item > a.m-tbl').click(function () {
+			if (!isMobile()) {
+				return;
+			}
+			$(this)
+				.siblings('.popup-nav')
+				.addClass('active')
+				.css({ top: Math.max(0, $('.s-header-mobile').height() - Win.scrollTop()) + 'px' });
+			return false;
+		});
+		$('.s-left-catalog-menu .main-nav .item .popup-nav .close').click(function () {
+			$(this).closest('.popup-nav').removeClass('active');
+			return false;
+		});
 		function resetAll() {
 			handlers.each(function () {
 				$($(this).attr('data-action-target')).removeClass('active');
