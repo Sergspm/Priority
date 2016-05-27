@@ -2645,7 +2645,8 @@ a {
 	position: relative;
 }
 .s-left-catalog-menu .main-nav .close,
-.s-left-catalog-menu .main-nav .item .popup-nav .close {
+.s-left-catalog-menu .main-nav .item .popup-nav .close,
+.s-catalog-filter .close {
 	position: absolute;
 	display: block;
 	width: 11px;
@@ -4531,6 +4532,18 @@ a {
 		display: block;
 		border-top: 1px solid #dcdde1;
 		margin: 30px 0;
+	}
+	.s-catalog-filter {
+		background: #fff;
+		overflow: auto;
+		padding: 0 15% 40px;
+	}
+	.s-catalog-filter .close-block {
+		position: relative;
+		margin-bottom: 70px;
+	}
+	.s-catalog-filter .close-block .close {
+		right: -15%;
 	}
 }
 @media (max-width: 320px) {

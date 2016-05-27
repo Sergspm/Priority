@@ -136,14 +136,16 @@
 		<section class="s-catalog-filter-listing">
 			<div class="s-inner m-cfx">
 
-				<section class="s-catalog-filter-left-col m-fullwide">
+				<section class="s-catalog-filter-left-col">
 					<form action="" method="GET" class="s-catalog-filter">
-
+						<div class="close-block m-mobile">
+							<a class="close" data-action="ghost-close" data-action-target=".s-catalog-filter"></a>
+						</div>
 						<section class="s-accordion prices-range">
 							<input type="checkbox" id="s-accordion-prices-range" class="accordion-switcher" checked>
 							<label for="s-accordion-prices-range" class="accordion-title">Цена</label>
 							<div class="accordion-body">
-								<div class="el-slider-range">
+								<div class="el-slider-range" data-price-min="700" data-price-max="4500">
 									<div class="inputs m-cfx">
 										<input type="text" class="text start" value="700">
 										<span>-</span>
@@ -158,7 +160,6 @@
 								</div>
 							</div>
 						</section>
-
 						<section class="s-accordion brands-list">
 							<input type="checkbox" id="s-accordion-brands-list" class="accordion-switcher" checked>
 							<label for="s-accordion-brands-list" class="accordion-title">Бренд</label>
@@ -214,7 +215,6 @@
 								</div>
 							</div>
 						</section>
-
 						<section class="s-accordion dimensions-list">
 							<input type="checkbox" id="s-accordion-dimensions-list" class="accordion-switcher" checked>
 							<label for="s-accordion-dimensions-list" class="accordion-title">Размер</label>
@@ -267,7 +267,6 @@
 								</div>
 							</div>
 						</section>
-
 						<section class="s-accordion dimensions-list">
 							<input type="checkbox" id="s-accordion-weight-list" class="accordion-switcher">
 							<label for="s-accordion-weight-list" class="accordion-title">Вес</label>
@@ -320,7 +319,6 @@
 								</div>
 							</div>
 						</section>
-
 						<section class="s-accordion dimensions-list">
 							<input type="checkbox" id="s-accordion-power-list" class="accordion-switcher">
 							<label for="s-accordion-power-list" class="accordion-title">Мощность</label>
@@ -373,12 +371,10 @@
 								</div>
 							</div>
 						</section>
-
 						<div class="buttons">
 							<input type="submit" value="применить" class="el-button gray"><br>
 							<a class="el-link gray">Очистить фильтр</a>
 						</div>
-
 					</form>
 				</section>
 
@@ -392,7 +388,7 @@
 						</div>
 					</div>
 					<div class="filter-link m-mobile">
-						<a href="#" class="el-link green">Фильтр</a>
+					<a href="#" class="el-link green" data-action="ghost" data-action-target=".s-catalog-filter">Фильтр</a>
 					</div>
 					<section class="s-catalog-products m-cfx">
 						<div class="outer">
