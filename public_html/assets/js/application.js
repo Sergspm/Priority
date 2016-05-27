@@ -305,12 +305,21 @@ $(function () {
 	// Show ghost's blocks
 	(function () {
 		var handlers = $('[data-action="ghost"]');
+		var close_handlers = $('[data-action="ghost-close"]');
 		handlers.click(function () {
 			var ghost = $($(this).attr('data-action-target'));
 			if (ghost.size()) {
 				resetAll();
 				Body.addClass('m-overflow-hide');
 				ghost.addClass('active').css({ top: Math.max(0, $('.s-header-mobile').height() - Win.scrollTop()) + 'px' });
+			}
+			return false;
+		});
+		close_handlers.click(function () {
+			var ghost = $($(this).attr('data-action-target'));
+			if (ghost.size()) {
+				Body.removeClass('m-overflow-hide');
+				ghost.removeClass('active');
 			}
 			return false;
 		});
