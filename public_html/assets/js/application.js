@@ -301,4 +301,23 @@ $(function () {
 			return;
 		}
 	})();
+
+	// Show ghost's blocks
+	(function () {
+		var handlers = $('[data-action="ghost"]');
+		handlers.click(function () {
+			var ghost = $($(this).attr('data-action-target'));
+			if (ghost.size()) {
+				resetAll();
+				Body.addClass('m-overflow-hide');
+				ghost.addClass('active').css({ top: Math.max(0, $('.s-header-mobile').height() - Win.scrollTop()) + 'px' });
+			}
+			return false;
+		});
+		function resetAll() {
+			handlers.each(function () {
+				$($(this).attr('data-action-target')).removeClass('active');
+			});
+		}
+	})();
 });

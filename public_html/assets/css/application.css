@@ -631,6 +631,9 @@ a {
 	background-color: #45454b;
 	padding-top: 1px;
 	margin-bottom: 3px;
+	-webkit-transition: background-color .5s;
+	-moz-transition: background-color .5s;
+	-o-transition: background-color .5s;
 	transition: background-color .5s;
 }
 .s-header-mobile.active {
@@ -670,6 +673,9 @@ a {
 }
 .s-header-mobile .menu-hamb,
 .s-header-mobile .menu-arrow {
+	-webkit-transition: left .5s;
+	-moz-transition: left .5s;
+	-o-transition: left .5s;
 	transition: left .5s;
 }
 .s-header-mobile.active .menu-hamb,
@@ -683,6 +689,9 @@ a {
 	opacity: 1;
 	top: 15px;
 	right: 15px;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-o-transition: opacity .3s;
 	transition: opacity .3s;
 }
 .s-header-mobile .lock {
@@ -701,7 +710,9 @@ a {
 	background: #ce494a;
 	width: 15px;
 	height: 15px;
-	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+	        border-radius: 8px;
 	color: #fff;
 	text-align: center;
 	font-size: 10px;
@@ -822,7 +833,8 @@ a {
 	margin: 0;
 }
 .s-main-top-slider .slide a,
-.s-main-top-slider .slide .inner {
+.s-main-top-slider .slide .inner,
+.s-main-top-slider .slide .inner .bg {
 	display: block;
 	position: absolute;
 	top: 0;
@@ -830,14 +842,26 @@ a {
 	bottom: 0;
 	left: 0;
 }
-.s-main-top-slider .slide .inner {
+.s-main-top-slider .slide .inner .bg {
+	z-index: 1;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	-moz-background-size: cover;
 	  -o-background-size: cover;
 	     background-size: cover;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
 }
-.s-main-top-slider .slide .inner:before {
+.s-main-top-slider .slide:hover .inner .bg {
+	-webkit-transform: rotate(-10deg) scale(1.2);
+	   -moz-transform: rotate(-10deg) scale(1.2);
+	    -ms-transform: rotate(-10deg) scale(1.2);
+	     -o-transform: rotate(-10deg) scale(1.2);
+	        transform: rotate(-10deg) scale(1.2);
+}
+.s-main-top-slider .slide .inner .bg:before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -852,7 +876,7 @@ a {
 	-o-transition: opacity .5s;
 	transition: opacity .5s;
 }
-.s-main-top-slider .slide:hover .inner:before {
+.s-main-top-slider .slide:hover .inner .bg:before {
 	opacity: .52;
 }
 .s-main-top-slider .slide a {
@@ -864,7 +888,7 @@ a {
 	color: #fff;
 	font-weight: 600;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 }
 .s-main-top-slider .slide h3 {
 	font-size: 18px;
@@ -3707,8 +3731,15 @@ a {
 	right: 100%;
 	left: -90%;
 	background: #434248;
+	background: -webkit-gradient(linear, left top, left bottom, from(#434248), to(#202022));
+	background: -webkit-linear-gradient(top, #434248, #202022);
+	background: -moz-linear-gradient(top, #434248, #202022);
+	background: -o-linear-gradient(top, #434248, #202022);
 	background: linear-gradient(to bottom, #434248, #202022);
 	z-index: 999;
+	-webkit-transition: right .5s, left .5s;
+	-moz-transition: right .5s, left .5s;
+	-o-transition: right .5s, left .5s;
 	transition: right .5s, left .5s;
 }
 .s-main-mobile-menu.active {
@@ -4056,7 +4087,9 @@ a {
 	.s-modal.signup,
 	.s-modal.remember {
 		background: url('../img/s-modal-signin-mobile-bg.png') 50% 50% no-repeat;
-		background-size: cover;
+		-moz-background-size: cover;
+		  -o-background-size: cover;
+		     background-size: cover;
 		padding-top: 30%;
 	}
 	.s-modal.signup {
@@ -4099,7 +4132,7 @@ a {
 	.s-modal.signin .buttons,
 	.s-modal.signup .buttons,
 	.s-modal.remember .buttons {
-		text-align: center; 
+		text-align: center;
 	}
 	.s-modal.signin .buttons .el-button,
 	.s-modal.signup .buttons .el-button,
@@ -4409,6 +4442,45 @@ a {
 		display: block;
 		width: 70%;
 		margin: 0 auto 5%;
+	}
+	.s-left-catalog-menu,
+	.s-catalog-filter {
+		position: fixed;
+		opacity: 0;
+		z-index: -9;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: 0;
+	}
+	.s-left-catalog-menu.active,
+	.s-catalog-filter.active {
+		opacity: 1;
+		z-index: 999;
+		-webkit-transition: opacity .3s, z-index 0s;
+		-moz-transition: opacity .3s, z-index 0s;
+		-o-transition: opacity .3s, z-index 0s;
+		transition: opacity .3s, z-index 0s;
+	}
+	.s-left-catalog-menu {
+		background: rgba(0, 0, 0, .6);
+	}
+	.s-left-catalog-menu .menu-head {
+		display: none;
+	}
+	.s-left-catalog-menu .main-nav {
+		background: #fff;
+		padding-top: 73px;
+		height: 100%;
+		overflow: auto;
+	}
+	.s-left-catalog-menu .main-nav .item {
+		margin: 0;
+	}
+	.s-left-catalog-menu .popup-nav {
+		left: 0;
+		width: 100%;
 	}
 }
 @media (max-width: 320px) {
