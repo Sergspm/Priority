@@ -3674,6 +3674,10 @@ a {
 	left: 0;
 	padding-right: 30px;
 }
+.s-float-right-panel-content .s-scroller-area .b-scroller-area-inner {
+	position: relative;
+	overflow: hidden;
+}
 .s-float-right-panel-content .b-tabs-content.compared .s-scroller-area {
 	top: 0;
 }
