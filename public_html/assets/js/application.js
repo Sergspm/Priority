@@ -295,12 +295,118 @@ $(function () {
 	});
 
 	// Price slider
-	(function () {
-		var slider = $('.el-slider-range');
-		if (!slider.size()) {
-			return;
+	$('.el-slider-range').each(function () {
+		var slider = $(this),
+			input_min = slider.find('.inputs .start'),
+			input_max = slider.find('.inputs .end'),
+			stripe_outer = slider.find('.stripe-outer'),
+			stripe = slider.find('.stripe'),
+			hands = slider.find('.hand'),
+			price_min = parseInt(slider.attr('data-price-min')),
+			price_max = parseInt(slider.attr('data-price-max')),
+			price_cur_min, price_cur_max, changed, stripe_outer_width,
+			move_property, move_start_x, move_start_offset_right, move_start_offset_left, outer_offset_x;
+
+		readPrices();
+		updateStripeOuterWidth();
+		translateFromValToStripe();
+
+		Win.on('resize', function () {
+			updateStripeOuterWidth();
+		});
+		input_min.on('change', function () {
+			changeViaInput('min');
+		});
+		input_max.on('change', function () {
+			changeViaInput('max');
+		});
+		hands.mousedown(initMove);
+
+		function initMove(e) {
+			move_start_x = e.clientX;
+			outer_offset_x = stripe_outer.offset().left;
+			move_start_offset_right = parseInt(stripe.css('right')) || 0;
+			move_start_offset_left = parseInt(stripe.css('left')) || 0;
+			move_property = $(e.target).hasClass('right') ? 'right' : 'left';
+			Doc.on('mousemove', move);
+			Doc.on('mouseup', stopMove);
 		}
-	})();
+
+		function move(e) {
+			var x = e.clientX,
+				delta = x - move_start_x,
+				new_offset = move_property === 'right'
+					? Math.min(stripe_outer_width - move_start_offset_left, Math.max(0, move_start_offset_right - delta))
+					: Math.max(0, Math.min(stripe_outer_width - move_start_offset_right, move_start_offset_left + delta));
+			stripe.css(move_property, new_offset + 'px');
+			translateFromOffsetsToVal(
+				move_property === 'right' ? new_offset : move_start_offset_right,
+				move_property !== 'right' ? new_offset : move_start_offset_left
+			);
+		}
+
+		function stopMove() {
+			Doc.off('mousemove', move);
+			Doc.off('mouseup', stopMove);
+		}
+
+		function translateFromOffsetsToVal(right, left) {
+			right = isFinite(right) ? right : parseInt(stripe.css('right')) || 0;
+			left = isFinite(left) ? left : parseInt(stripe.css('left')) || 0;
+			var perc_width = stripe_outer_width / 100,
+				perc_price = (price_max - price_min) / 100;
+			input_min.val(parseInt(Math.min(price_cur_max, price_min + (left / perc_width) * perc_price)));
+			input_max.val(parseInt(Math.max(price_cur_min, price_max - (right / perc_width) * perc_price)));
+		}
+
+		function translateFromValToStripe() {
+			var total_delta = price_max - price_min,
+				current_min_delta = price_cur_min - price_min,
+				current_max_delta = price_max - price_cur_max;
+			stripe.css({
+				left: ((stripe_outer_width / 100) * (current_min_delta / (total_delta / 100))) + 'px',
+				right: ((stripe_outer_width / 100) * (current_max_delta / (total_delta / 100))) + 'px'
+			});
+		}
+
+		function translateValToInputs() {
+			input_min.val(price_cur_min);
+			input_max.val(price_cur_max);
+		}
+
+		function changeViaInput(mode) {
+			changed = mode;
+			readPrices();
+			translateValToInputs();
+			translateFromValToStripe();
+		}
+
+		function validatePrices() {
+			if (!isFinite(price_cur_min) || price_cur_min < price_min) {
+				price_cur_min = price_min;
+			}
+			if (!isFinite(price_cur_max) || price_cur_max > price_max) {
+				price_cur_max = price_max;
+			}
+			if (price_cur_min > price_cur_max) {
+				if (changed === 'min') {
+					price_cur_min = price_cur_max;
+				} else {
+					price_cur_max = price_cur_min;
+				}
+			}
+		}
+
+		function readPrices() {
+			price_cur_min = parseInt(input_min.val()) || price_min;
+			price_cur_max = parseInt(input_max.val()) || price_max;
+			validatePrices();
+		}
+
+		function updateStripeOuterWidth() {
+			stripe_outer_width = stripe_outer.width();
+		}
+	});
 
 	// Show ghost's blocks
 	(function () {
