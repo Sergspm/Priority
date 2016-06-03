@@ -408,6 +408,49 @@ $(function () {
 		}
 	});
 
+	// Scrollers
+	$('.s-scroller').each(function () {
+		var scroller = $(this),
+			stripe_outer = scroller.find('.scroller-outer'),
+			stripe = stripe_outer.find('.stripe'),
+			hand = stripe.find('.hand'),
+			inner = scroller.find('.inner'),
+			init_y, init_stripe_height, stripe_outer_height, scroller_height, inner_height;
+
+		if (scroller.height() >= inner.height()) {
+			return;
+		}
+
+		stripe_outer.addClass('active');
+
+		hand.on('mousedown', start);
+
+		function start(e) {
+			init_y = e.clientY;
+			stripe_outer_height = stripe_outer.height();
+			init_stripe_height = stripe.height();
+			scroller_height = scroller.outerHeight();
+			inner_height = inner.outerHeight();
+			Doc.on('mousemove', move);
+			Doc.on('mouseup', stop);
+		}
+
+		function move(e) {
+			var y = e.clientY,
+				delta = y - init_y,
+				new_height = Math.max(0, Math.min(stripe_outer_height, init_stripe_height + delta)),
+				inner_top =  -1 * parseInt(((inner_height - scroller_height) / 100) * (new_height / (stripe_outer_height / 100)));
+			stripe.css({ height: new_height + 'px' });
+			inner.css({ top: inner_top + 'px' });
+			return false;
+		}
+
+		function stop() {
+			Doc.off('mousemove', move);
+			Doc.off('mouseup', stop);
+		}
+	});
+
 	// Show ghost's blocks
 	(function () {
 		var handlers = $('[data-action="ghost"]');

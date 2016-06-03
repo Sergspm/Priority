@@ -380,13 +380,14 @@ a {
 }
 .s-scroller .inner {
 	position: relative;
+	padding-bottom: 15px;
 }
 .s-scroller .scroller-outer {
 	position: absolute;
 	width: 11px;
-	top: 5px;
-	right: 5px;
-	bottom: 5px;
+	top: 15px;
+	right: -20px;
+	bottom: 15px;
 	border: 1px solid #b6b6b6;
 	-webkit-border-radius: 7px;
 	   -moz-border-radius: 7px;
@@ -400,13 +401,22 @@ a {
 	background-image: -moz-linear-gradient(left, #fdfdfd, #cdcdcd);
 	background-image: -o-linear-gradient(left, #fdfdfd, #cdcdcd);
 	background-image: linear-gradient(to right, #fdfdfd, #cdcdcd);
+	opacity: 0;
+	-webkit-transition: opacity .3s, right .3s;
+	-moz-transition: opacity .3s, right .3s;
+	-o-transition: opacity .3s, right .3s;
+	transition: opacity .3s, right .3s;
+}
+.s-scroller .scroller-outer.active {
+	right: 5px;
+	opacity: 1;
 }
 .s-scroller .scroller-outer .stripe {
 	position: absolute;
 	width: 100%;
 	top: 0;
 	left: 0;
-	min-height: 20%;
+	max-height: 100%;
 	background: #cfcfcf;
 	-webkit-border-radius: 8px;
 	   -moz-border-radius: 8px;
