@@ -2259,7 +2259,8 @@ a {
 	margin-bottom: 30px;
 }
 .s-modal.signin .el-input-text,
-.s-modal.signin .el-input-password {
+.s-modal.signin .el-input-password,
+.s-modal.send-resume .el-input-text {
 	display: block;
 	margin: 20px auto;
 }

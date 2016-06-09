@@ -15,7 +15,7 @@
 
 			<section class="s-header-mobile m-mobile">
 				<a class="menu-hamb"></a>
-				<a class="lock"></a>
+				<a class="lock" data-action="modal-show" data-action-target="signin"></a>
 				<h1>О компании</h1>
 			</section>
 
@@ -47,7 +47,7 @@
 						<a href="#">Контакты</a>
 					</nav>
 					<div class="lk">
-						<a href="#" class="login">Вход в личный кабинет</a>
+						<a href="#" class="login" data-action="modal-show" data-action-target="signin">Вход в личный кабинет</a>
 						<span class="lock"></span>
 					</div>
 				</div>
@@ -270,7 +270,7 @@
 									</div>
 									<div class="content request-desc">
 										<p>Возможно, что мы ждём именно Вас! Пожалуйста, отправьте нам Ваше резюме.</p>
-										<a href="#" class="el-button green send"></a>
+										<a href="#" class="el-button green send" data-action="modal-show" data-action-target="send-resume"></a>
 									</div>
 								</div>
 							</div>
@@ -993,6 +993,28 @@
 									<a class="el-link white" data-action="modal-show" data-action-target="signin">Войти</a>
 								</div>
 							</div>
+						</div>
+					</form>
+				</section>
+
+				<section class="s-modal send-resume">
+					<a class="close" data-action="modal-hide"></a>
+					<h1>Отправка резюме</h1>
+					<form action="" method="POST">
+						<label class="el-input-text">
+							<input type="text" placeholder="Ваше имя">
+						</label>
+						<label class="el-input-text">
+							<input type="text" placeholder="Email">
+						</label>
+						<label class="el-input-text">
+							<input type="text" placeholder="Номер телефона">
+						</label>
+						<label class="el-input-text">
+							<input type="text" placeholder="Ссылка на резюме: www">
+						</label>
+						<div class="buttons">
+							<input type="submit" value="отправить" class="el-button green">
 						</div>
 					</form>
 				</section>
