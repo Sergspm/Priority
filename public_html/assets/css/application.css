@@ -2298,6 +2298,11 @@ a {
 .s-modal.signup .buttons .el-button {
 	margin-right: 10px;
 }
+.s-modal.remember p {
+	margin-top: -20px;
+	margin-bottom: 40px;
+	max-width: 300px;
+}
 .s-modal.remember .el-input-text {
 	margin-bottom: 30px;
 }
@@ -4558,6 +4563,11 @@ a {
 	}
 	.s-catalog-filter .close-block .close {
 		right: -15%;
+	}
+	.s-modal.signin .buttons .el-button.register-fullwide,
+	.s-modal.remember .buttons .el-button.restore-fullwide,
+	.s-modal.signup .buttons .el-button.register-fullwide {
+		display: none;
 	}
 }
 @media (max-width: 320px) {
