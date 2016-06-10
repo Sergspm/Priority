@@ -153,14 +153,16 @@
 			<div class="s-inner">
 				<h1 class="m-fullwide">Корзина</h1>
 				<div class="cart m-cfx">
-					<div class="m-tbl head m-fullwide">
-						<div class="m-cell img"></div>
-						<div class="m-cell title">Наименование</div>
-						<div class="m-cell price">Цена</div>
-						<div class="m-cell count">Количество</div>
-						<div class="m-cell sum">Сумма</div>
-						<div class="m-cell like"></div>
-						<div class="m-cell remove"></div>
+					<div class="m-fullwide">
+						<div class="m-tbl head ">
+							<div class="m-cell img"></div>
+							<div class="m-cell title">Наименование</div>
+							<div class="m-cell price">Цена</div>
+							<div class="m-cell count">Количество</div>
+							<div class="m-cell sum">Сумма</div>
+							<div class="m-cell like"></div>
+							<div class="m-cell remove"></div>
+						</div>
 					</div>
 					<div class="m-tbl row">
 						<div class="m-cell img">
@@ -1079,6 +1081,57 @@
 						<div class="buttons">
 							<img src="assets/img/tmp-captcha.png" alt="">
 							<input type="submit" value="готово" class="el-button green">
+						</div>
+					</form>
+				</section>
+
+				<section class="s-modal callback">
+					<a class="close" data-action="modal-hide"></a>
+					<h1>Обратный звонок</h1>
+					<form action="" method="POST">
+						<label class="el-input-text">
+							<input type="text" placeholder="Ваше имя">
+						</label>
+						<label class="el-input-text">
+							<input type="text" placeholder="Номер телефона">
+						</label>
+						<div class="buttons">
+							<input type="submit" value="жду звонка" class="el-button green">
+						</div>
+					</form>
+				</section>
+
+				<section class="s-modal help">
+					<a class="close" data-action="modal-hide"></a>
+					<h1>Помощь</h1>
+					<p class="m-fullwide">Не нашли что искали?<br>Хотите отправить сформированный бланк заказа?</p>
+					<form action="" method="POST">
+						<div class="col">
+							<label class="el-input-text">
+								<input type="text" placeholder="Ваше имя">
+							</label>
+							<label class="el-input-text">
+								<input type="text" placeholder="Email">
+							</label>
+							<label class="el-input-text">
+								<input type="text" placeholder="Телефон">
+							</label>
+						</div>
+						<div class="col">
+							<label class="el-input-textarea">
+								<textarea placeholder="Сообщение"></textarea>
+							</label>
+						</div>
+						<div class="buttons">
+							<div class="file">
+								<span>Прикрепить файл:</span>
+								<label class="el-file">
+									<input type="file">
+									<a class="el-button gray">Выбрать</a>
+									<span data-default-text="файл не выбран">файл не выбран</span>
+								</label>
+							</div>
+							<input type="submit" value="отправить" class="el-button green">
 						</div>
 					</form>
 				</section>

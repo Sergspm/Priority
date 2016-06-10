@@ -139,6 +139,18 @@ a {
 	border: 1px solid;
 }
 
+.el-file {
+	display: inline-block;
+}
+.el-file input[type="file"] {
+	display: none;
+}
+.el-file span {
+	display: inline-block;
+	color: #989898;
+	margin-left: 10px;
+}
+
 .el-link {
 	display: inline-block;
 	border-bottom: 1px dashed;
@@ -638,12 +650,18 @@ a {
 	opacity: 0;
 	font-size: 0;
 	line-height: 0;
+	-webkit-transition: opacity .3s .3s, top 0s .6s;
+	-moz-transition: opacity .3s .3s, top 0s .6s;
+	-o-transition: opacity .3s .3s, top 0s .6s;
 	transition: opacity .3s .3s, top 0s .6s;
 	padding: 25px 30px 0 30px;
 }
 .s-header-nav .nav .item:hover .sub-nav {
 	top: 40px;
 	opacity: 1;
+	-webkit-transition: opacity .3s, top 0s;
+	-moz-transition: opacity .3s, top 0s;
+	-o-transition: opacity .3s, top 0s;
 	transition: opacity .3s, top 0s;
 }
 .s-header-nav .sub-nav a {
@@ -657,12 +675,18 @@ a {
 	text-align: center;
 	width: 14.2%;
 	margin-bottom: 30px;
+	-webkit-transition: color .3s;
+	-moz-transition: color .3s;
+	-o-transition: color .3s;
 	transition: color .3s;
 }
 .s-header-nav .sub-nav a:before {
 	content: "";
 	display: block;
 	height: 91px;
+	-webkit-transition: background-image .3s;
+	-moz-transition: background-image .3s;
+	-o-transition: background-image .3s;
 	transition: background-image .3s;
 	background-position: 50% 100%;
 	background-repeat: no-repeat;
@@ -2437,7 +2461,8 @@ a {
 .s-modal.send-resume .el-input-text,
 .s-modal.complain-price .el-input-text,
 .s-modal.reset-password .el-input-text,
-.s-modal.callback .el-input-text {
+.s-modal.callback .el-input-text,
+.s-modal.help .el-input-text {
 	display: block;
 	margin: 20px auto;
 }
@@ -2539,6 +2564,40 @@ a {
 }
 .s-modal.callback .buttons {
 	padding-top: 20px;
+}
+.s-modal.help p {
+	margin-top: -20px;
+	margin-bottom: 40px;
+}
+.s-modal.help .col {
+	float: left;
+	width: 330px;
+	margin-right: 40px;
+}
+.s-modal.help .col:nth-of-type(2) {
+	margin-right: 0;
+}
+.s-modal.help .el-input-text,
+.s-modal.help .el-input-textarea {
+	width: 100%;
+	margin-top: 0;
+}
+.s-modal.help .el-input-textarea {
+	height: 160px;
+}
+.s-modal.help .buttons {
+	clear: both;
+	padding-top: 20px;
+}
+.s-modal.help .buttons .el-button.green {
+	float: right;
+}
+.s-modal.help .buttons .file {
+	float: left;
+}
+.s-modal.help .buttons .file > span {
+	display: inline-block;
+	margin-right: 10px;
 }
 
 .s-card-description-tabs {
