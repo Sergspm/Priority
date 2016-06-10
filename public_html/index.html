@@ -730,7 +730,6 @@
 
 		<section class="s-map-row">
 			<div class="inner">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31988.91312725436!2d30.34386137135259!3d59.92704668630636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1462482246196" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 		</section>
 
@@ -795,7 +794,7 @@
 					8 (800) 777 01 53
 				</div>
 				<div class="call-order">
-					<a href="#" class="el-link gray">Заказать звонок</a>
+					<a href="#" class="el-link gray" data-action="modal-show" data-action-target="callback">Заказать звонок</a>
 				</div>
 				<div class="email m-mobile">
 					<a href="mailto:info@prioritet.su">info@prioritet.su</a>
@@ -1368,7 +1367,15 @@
 		</div>
 	</section>
 
+	<section class="s-gmaps-baloon">
+		<h1>г. Санкт-Петербург</h1>
+		<div><span>Адрес:</span>Железнодорожный проспект д.40</div>
+		<div><span>Телефон:</span>8 (812) 777-01-53 &nbsp; &nbsp;8 (800) 777-01-53</div>
+		<a href="#" class="el-link green" data-action="modal-show" data-action-target="callback">Заказать звонок</a>
+	</section>
+
 	<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKXW50QAgnUxKcxsBR89KHmRgXQnlRU44&amp;callback=priorityGoogleMapsInit"></script>
 	<script src="assets/js/application.js"></script>
 </body>
 </html>

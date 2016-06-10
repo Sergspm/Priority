@@ -127,7 +127,7 @@ $(function () {
 		var modal = $('.s-modals'),
 			modals = $('.s-modal'),
 			class_active = 'active';
-		$('[data-action="modal-show"]').click(function () {
+		$(document).on('click', '[data-action="modal-show"]', function () {
 			Body.addClass('m-overflow-hide');
 			modal.addClass('active');
 			modals.removeClass('active').filter('.' + ($(this).attr('data-action-target') || 'a')).addClass('active');
@@ -534,3 +534,30 @@ $(function () {
 		}
 	})();
 });// http://huuh.ru/
+
+
+(function () {
+	var Map = null,
+		InfoWindow = null,
+		coords = { lat: 59.881409, lng: 30.414208 },
+		InfoWindowData = 'Error';
+	try {
+		InfoWindowData = document.querySelector('.s-gmaps-baloon').outerHTML.replace(/s-gmaps-baloon/, 's-gmaps-baloon active');
+	} catch (e) {}
+	window.priorityGoogleMapsInit = function () {
+		try {
+			Map = new google.maps.Map(document.querySelector('.s-map-row .inner'), {
+				center: coords,
+				zoom: 16,
+				scrollwheel: false
+			});
+			InfoWindow = new google.maps.InfoWindow({
+				content: InfoWindowData,
+				position: coords
+			});
+			InfoWindow.open(Map);
+		} catch (e) {}
+	};
+})();
+
+
