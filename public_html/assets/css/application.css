@@ -2436,7 +2436,8 @@ a {
 .s-modal.signin .el-input-password,
 .s-modal.send-resume .el-input-text,
 .s-modal.complain-price .el-input-text,
-.s-modal.reset-password .el-input-text {
+.s-modal.reset-password .el-input-text,
+.s-modal.callback .el-input-text {
 	display: block;
 	margin: 20px auto;
 }
@@ -2535,6 +2536,9 @@ a {
 .s-modal.reset-password .buttons .el-button {
 	vertical-align: bottom;
 	margin-left: 60px;
+}
+.s-modal.callback .buttons {
+	padding-top: 20px;
 }
 
 .s-card-description-tabs {
