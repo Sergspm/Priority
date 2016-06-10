@@ -2261,7 +2261,8 @@ a {
 .s-modal.signin .el-input-text,
 .s-modal.signin .el-input-password,
 .s-modal.send-resume .el-input-text,
-.s-modal.complain-price .el-input-text {
+.s-modal.complain-price .el-input-text,
+.s-modal.reset-password .el-input-text {
 	display: block;
 	margin: 20px auto;
 }
@@ -2347,6 +2348,19 @@ a {
 	font-size: 13px;
 	font-weight: 400;
 	color: #989898;
+}
+.s-modal.reset-password p {
+	max-width: 300px;
+	margin-top: -15px;
+	margin-bottom: 40px;
+}
+.s-modal.reset-password .buttons img {
+	display: inline-block;
+	vertical-align: top;
+}
+.s-modal.reset-password .buttons .el-button {
+	vertical-align: bottom;
+	margin-left: 60px;
 }
 
 .s-card-description-tabs {
