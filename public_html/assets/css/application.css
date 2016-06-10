@@ -2260,7 +2260,8 @@ a {
 }
 .s-modal.signin .el-input-text,
 .s-modal.signin .el-input-password,
-.s-modal.send-resume .el-input-text {
+.s-modal.send-resume .el-input-text,
+.s-modal.complain-price .el-input-text {
 	display: block;
 	margin: 20px auto;
 }
@@ -2279,7 +2280,8 @@ a {
 	margin-bottom: 30px;
 	max-width: 480px;
 }
-.s-modal.signup .col {
+.s-modal.signup .col,
+.s-modal.complain-price .col {
 	float: left;
 }
 .s-modal.signup .col:first-child {
@@ -2309,6 +2311,42 @@ a {
 }
 .s-modal.remember .el-button.green {
 	margin-right: 10px;
+}
+.s-modal.complain-price p {
+	margin-top: -15px;
+	margin-bottom: 20px;
+}
+.s-modal.complain-price p strong {
+	font-weight: 600;
+}
+.s-modal.complain-price .col {
+	width: 300px;
+	margin-right: 40px;
+}
+.s-modal.complain-price .col:nth-of-type(2n) {
+	margin-right: 0;
+}
+.s-modal.complain-price .col:nth-of-type(1) {
+	padding-bottom: 20px;
+}
+.s-modal.complain-price .el-input-text {
+	width: 100%;
+}
+.s-modal.complain-price h2 {
+	font-weight: 600;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.s-modal.complain-price .el-radio {
+	margin-right: 20px;
+}
+.s-modal.complain-price .el-radio span {
+	font-weight: 600;
+}
+.s-modal.complain-price .el-radio em {
+	font-size: 13px;
+	font-weight: 400;
+	color: #989898;
 }
 
 .s-card-description-tabs {
